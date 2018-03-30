@@ -34,6 +34,10 @@ const paths = {
 		source: 'src/templates/*.mustache',
 		watch: ['src/components/**/*.mustache', 'src/templates/*.mustache'],
 		target: 'build/templates'
+	},
+	font: {
+		source: 'src/fonts/*',
+		target: 'build/fonts'
 	}
 };
 
@@ -137,11 +141,16 @@ gulp.task('html', function () {
 	return gulp.src(paths.html.source)
 		.pipe(mustache({}, {
 			extension: '.html'
-		}))
+		}).on('error', errorHandlers.js))
 		.pipe(gulp.dest(paths.html.target));
 });
 
-gulp.task('build', ['html', 'css:build', 'css:build:hotFix', 'js:build', 'image:min']);
+gulp.task('fonts', function () {
+	return gulp.src(paths.font.source)
+        .pipe(gulp.dest(paths.font.target));
+});
+
+gulp.task('build', ['html', 'css:build', 'css:build:hotFix', 'js:build', 'image:min', 'fonts']);
 
 gulp.task('watch', ['html', 'css:dev', 'js:dev'], function () {
 	watch(paths.html.watch, function () {
