@@ -8,18 +8,93 @@ body {
 	font-size: 1rem;
 	line-height: 1.5;
 	font-weight: 300;
+	color: @color__blue;
 }
 
 a {
 	display: inline-block;
 	vertical-align: baseline;
+	color: inherit;
 }
 
 .container {
-	padding: 0 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .content {
 	max-width: @content__width;
 	margin: 0 auto;
+}
+
+/* text */
+.text {
+	&__color {
+		&--white {
+			color: @color__white;
+		}
+
+		&--lightBlue {
+			color: @color__lightBlue;
+		}
+	}
+
+	&__size--small {
+		font-size: 12px;
+	}
+}
+
+/* link */
+.link {
+	position: relative;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 2rem 1rem;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: @color__red;
+		text-decoration: none;
+
+		&:before {
+			content: '\66';
+			font-family: "ciconsulting" !important;
+			font-style: normal !important;
+			font-weight: normal !important;
+			font-variant: normal !important;
+			text-transform: none !important;
+			speak: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			color: @color__red;
+			position: absolute;
+			display: block;
+			margin: 1.2rem auto 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
+	}
+
+	&__hoverColor {
+		&--blue {
+			&:hover,
+			&:active {
+				color: @color__blue;
+			}
+		}
+
+		&--white {
+			&:hover,
+			&:active {
+				color: @color__white;
+
+				&:before {
+					color: @color__white;
+				}
+			}
+		}
+	}
 }
