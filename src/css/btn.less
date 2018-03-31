@@ -23,7 +23,7 @@
 	}
 }
 
-.linkBtn {
+.btn-link {
 	position: relative;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -69,7 +69,7 @@
 	}
 }
 
-.iconBtn {
+.btn-icon {
 	font-size: 2rem;
 	padding: 0 0.2rem;
 
@@ -101,5 +101,13 @@
 
 	@media (min-width: @breakpoint__md) {
 		font-size: 1.5rem;
+	}
+}
+
+.btn-image {
+	&:hover,
+	&:active {
+		text-decoration: none;
+		opacity: 0.8;
 	}
 }
