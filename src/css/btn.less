@@ -78,7 +78,7 @@
 }
 
 .iconBtn {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	padding: 0 0.2rem;
 
 	&:hover,
@@ -105,5 +105,9 @@
 				color: lighten(@color__lightBlue, 10%);
 			}
 		}
+	}
+
+	@media (min-width: @breakpoint__md) {
+		font-size: 1.5rem;
 	}
 }
