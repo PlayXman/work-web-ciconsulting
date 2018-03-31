@@ -1,0 +1,49 @@
+.homeBanner {
+	position: relative;
+
+	&:after {
+		content: '';
+		display: block;
+		padding-top: 38.17%;
+	}
+
+	&__content {
+		position: absolute;
+		margin: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+
+		.row {
+			height: 100%;
+		}
+	}
+
+	&__bg {
+		background: url("../images/home/bg_banner.jpg") no-repeat center;
+		background-size: cover;
+	}
+
+	&__text {
+		p {
+			margin-bottom: 3rem;
+		}
+	}
+
+	@media (max-width: 746px){
+		&__content {
+			position: relative;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: auto;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+}

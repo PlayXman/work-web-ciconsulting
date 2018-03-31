@@ -14,11 +14,11 @@ footer {
 	}
 
 	&__menu {
-		@media (min-width: 768px) {
+		@media (min-width: @breakpoint__md) {
 			margin-right: 1rem;
 		}
 
-		@media (max-width: 575px) {
+		@media (max-width: (@breakpoint__sm - 1)) {
 			padding: 2rem 0;
 		}
 
@@ -26,7 +26,7 @@ footer {
 			padding-left: 0.8rem;
 			padding-right: 0.8rem;
 
-			@media (max-width: 575px) {
+			@media (max-width: (@breakpoint__sm - 1)) {
 				padding: 0.8rem;
 
 				&:before {

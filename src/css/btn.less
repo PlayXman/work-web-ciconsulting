@@ -1,3 +1,28 @@
+.btn {
+	font-size: 0.9em;
+	line-height: 1.2;
+	font-weight: bold;
+	padding: 1.1em 2.6em;
+	color: @color__red;
+	border: 3px solid @color__red;
+	text-transform: uppercase;
+	vertical-align: middle;
+
+	&:hover,
+	&:active {
+		opacity: 0.8;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&__color {
+		&--white {
+			color: @color__white;
+			border-color: @color__white;
+		}
+	}
+}
+
 .linkBtn {
 	position: relative;
 	font-weight: bold;
