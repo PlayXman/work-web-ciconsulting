@@ -6,10 +6,33 @@
 	&--item {
 		position: relative;
 		padding-right: 30px;
+
+		a {
+			&:hover,
+			&:active {
+				text-decoration: none;
+
+				.block__grant--icon {
+					color: @color__red;
+
+					&:after {
+						content: '\66';
+						.icon();
+						position: absolute;
+						bottom: 0.8rem;
+						left: 0;
+						right: 0;
+						font-size: 1rem;
+					}
+				}
+			}
+		}
 	}
 
 	&--icon {
 		font-size: 3.9rem;
+		padding-bottom: 1rem;
+		position: relative;
 	}
 
 	&--text {
