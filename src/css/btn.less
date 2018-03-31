@@ -1,0 +1,81 @@
+.linkBtn {
+	position: relative;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 2rem 1rem;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: @color__red;
+		text-decoration: none;
+
+		&:before {
+			content: '\66';
+			font-family: "ciconsulting" !important;
+			font-style: normal !important;
+			font-weight: normal !important;
+			font-variant: normal !important;
+			text-transform: none !important;
+			speak: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			color: @color__red;
+			position: absolute;
+			display: block;
+			margin: 1.2rem auto 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
+	}
+
+	&__hoverColor {
+		&--blue {
+			&:hover,
+			&:active {
+				color: @color__blue;
+			}
+		}
+
+		&--white {
+			&:hover,
+			&:active {
+				color: @color__white;
+
+				&:before {
+					color: @color__white;
+				}
+			}
+		}
+	}
+}
+
+.iconBtn {
+	&:hover,
+	&:active {
+		text-decoration: none;
+		color: lighten(@color__blue, 10%);
+	}
+
+	&__color {
+		&--red {
+			color: @color__red;
+
+			&:hover,
+			&:active {
+				color: darken(@color__red, 10%);
+			}
+		}
+
+		&--lightBlue {
+			color: @color__lightBlue;
+
+			&:hover,
+			&:active {
+				color: lighten(@color__lightBlue, 10%);
+			}
+		}
+	}
+}
