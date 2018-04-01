@@ -4,6 +4,11 @@
 
 html {
 	font-size: 80%;
+	background: #23428e;
+	background: -moz-radial-gradient(20% 60%, ellipse cover, #23428e 0%, #29337a 100%);
+	background: -webkit-radial-gradient(20% 60%, ellipse cover, #23428e 0%, #29337a 100%);
+	background: radial-gradient(ellipse at 20% 60%, #23428e 0%, #29337a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23428e', endColorstr='#29337a', GradientType=1);
 
 	@media (min-width: @breakpoint__sm) {
 		font-size: 90%;
@@ -21,6 +26,7 @@ body {
 	line-height: 1.5;
 	font-weight: 300;
 	color: @color__blue;
+	background: @color__white;
 }
 
 a {
