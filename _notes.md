@@ -13,6 +13,16 @@
 
 
 # Dodelat
+- Header
+	- Search box
+	- Hamburger menu
 - HP
 	- Obory
 		- Objeveni se postupny random po scrollu na.
+- Podstranka
+	- galerie
+- Form
+- Zakladni styly (simple page)
+- Aktuality
+	- Vypis
+	- detail
