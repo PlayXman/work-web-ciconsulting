@@ -96,9 +96,7 @@ gulp.task('css:build:hotFix', function () {
 
 gulp.task('js:dev', function () {
 	return gulp.src(paths.js.source)
-		.pipe(sourcemaps.init())
 		.pipe(concat('script.min.js'))
-		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(paths.js.target));
 });
 

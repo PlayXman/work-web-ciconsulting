@@ -14,8 +14,7 @@
 
 # Dodelat
 - Header
-	- Search box
-	- Hamburger menu
+	- Search box - dostylovat
 - HP
 	- Obory
 		- Objeveni se postupny random po scrollu na.
