@@ -1,0 +1,89 @@
+.banner-article {
+	position: relative;
+
+	&__text {
+		padding: 2rem 15px;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__image {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		z-index: 1;
+		padding-top: 24%;
+	}
+
+	@media (min-width: @content__width--article) {
+		&__text {
+			width: 40%;
+		}
+
+		&__image {
+			width: 60%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			padding-top: 0;
+		}
+	}
+}
+
+article {
+	max-width: @content__width--article;
+
+	h3 {
+		color: @color__red;
+	}
+}
+
+.perex {
+	font-size: 1.3rem;
+	line-height: 1.7;
+	padding-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		height: 1px;
+		background: fade(@color__blue, 20%);
+		bottom: 0;
+		width: 45%;
+	}
+}
+
+blockquote {
+	font-style: italic;
+	font-weight: bold;
+	padding: 2rem 5%;
+	position: relative;
+	margin-bottom: 1.6rem;
+
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		height: 1px;
+		background: fade(@color__blue, 20%);
+		bottom: 1.1rem;
+		width: calc(~"45% - 1.2rem");
+	}
+
+	&:after {
+		content: '„';
+		position: absolute;
+		display: block;
+		font-size: 4.2rem;
+		font-style: normal;
+		left: 0;
+		right: 0;
+		bottom: -1rem;
+		text-align: center;
+		color: fade(@color__blue, 20%);
+	}
+}
