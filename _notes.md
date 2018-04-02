@@ -15,9 +15,6 @@
 # Dodelat
 - Header
 	- Search box - dostylovat
-- HP
-	- Obory
-		- Objeveni se postupny random po scrollu na.
 - Podstranka
 	- galerie
 - Form

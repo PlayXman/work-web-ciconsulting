@@ -21,6 +21,8 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: right center;
+		transition: opacity 300ms ease-in-out;
+		opacity: 1;
 
 		&-content {
 			display: flex;
@@ -46,6 +48,12 @@
 
 		&.has-image {
 			flex-grow: 2;
+		}
+
+		@media (max-width: 629px) {
+			&.hidden--initial {
+				opacity: 1;
+			}
 		}
 
 		@media (min-width: 615px) {
