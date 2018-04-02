@@ -13,11 +13,11 @@
 
 
 # Dodelat
-- Header
-	- Search box - dostylovat
 - Podstranka
 	- galerie
 - Form
+- Header
+	- Search box - dostylovat
 - Zakladni styly (simple page)
 - Aktuality
 	- Vypis
