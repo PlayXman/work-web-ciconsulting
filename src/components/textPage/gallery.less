@@ -1,0 +1,43 @@
+.gallery {
+	&__item {
+		padding: 0;
+		position: relative;
+
+		&:hover,
+		&:active {
+			&:before {
+				.icon();
+				content: '\6e';
+				display: block;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				color: @color__white;
+				position: absolute;
+				z-index: 2;
+				font-size: 3rem;
+				line-height: 1.2;
+				height: 3rem;
+				text-align: center;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.2);
+				z-index: 1;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}
