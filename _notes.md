@@ -13,8 +13,6 @@
 
 
 # Dodelat
-- Podstranka
-	- galerie
 - Form
 - Header
 	- Search box - dostylovat
