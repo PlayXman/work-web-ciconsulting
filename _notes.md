@@ -13,9 +13,6 @@
 
 
 # Dodelat
-- Form
-- Header
-	- Search box - dostylovat
 - Zakladni styly (simple page)
 - Aktuality
 	- Vypis

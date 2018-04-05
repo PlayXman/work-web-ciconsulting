@@ -12,13 +12,48 @@
 	&:active {
 		opacity: 0.8;
 		text-decoration: none;
-		color: inherit;
+		color: @color__red;
 	}
 
 	&__color {
 		&--white {
 			color: @color__white;
 			border-color: @color__white;
+
+			&:hover,
+			&:active {
+				color: @color__white;
+			}
+		}
+
+		&--blue{
+			color: @color__blue;
+			border-color: @color__blue;
+
+			&:hover,
+			&:active {
+				color: @color__blue;
+			}
+		}
+
+		&--green{
+			color: @color__green;
+			border-color: @color__green;
+
+			&:hover,
+			&:active {
+				color: @color__green;
+			}
+		}
+
+		&--grey{
+			color: @color__grey;
+			border-color: @color__grey;
+
+			&:hover,
+			&:active {
+				color: @color__grey;
+			}
 		}
 	}
 

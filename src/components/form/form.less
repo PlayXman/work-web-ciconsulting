@@ -1,0 +1,107 @@
+.form {
+	&__headding {
+		display: block;
+		font-weight: normal;
+	}
+
+	&__inLine {
+		padding-top: 0.6em;
+		padding-bottom: 0.6em;
+
+		label:not(.form__headding) {
+			margin-right: 0.8rem;
+		}
+	}
+}
+
+form {
+	.g-recaptcha {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2rem;
+
+		@media (max-width: 400px) {
+			transform-origin: 50% 0;
+			transform: scale(0.8);
+		}
+	}
+
+	.btn {
+		background: none;
+		margin: 0 0.5rem 2rem;
+	}
+}
+
+input {
+	&[type=text],
+	&[type=password],
+	&[type=date],
+	&[type=email],
+	&[type=search],
+	&[type=number],
+	&[type=tel] {
+		display: block;
+		width: 100%;
+		margin-bottom: 2rem;
+		font-weight: 300;
+		padding: 0.6em 0.8em;
+		color: inherit;
+		border: 2px solid @color__grey;
+	}
+
+	&[type=file] {
+		display: block;
+		width: 100%;
+		margin-bottom: 2rem;
+		font-weight: 300;
+		padding: 0.6em 0.8em;
+		color: @color__black;
+		background: @color__grey;
+	}
+
+	&[type=checkbox],
+	&[type=radio] {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 0.2rem;
+	}
+
+	&[type=range] {
+		display: block;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	&[type=submit],
+	&[type=button],
+	&[type=reset] {
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+button {
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	min-height: 100px;
+	margin-bottom: 2rem;
+	font-weight: 300;
+	padding: 0.6em 0.8em;
+	color: inherit;
+	border: 2px solid @color__grey;
+}
