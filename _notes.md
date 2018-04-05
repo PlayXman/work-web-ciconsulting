@@ -13,7 +13,6 @@
 
 
 # Dodelat
-- Zakladni styly (simple page)
 - Aktuality
 	- Vypis
 	- detail
