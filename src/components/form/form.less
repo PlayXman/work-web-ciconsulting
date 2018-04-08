@@ -12,6 +12,18 @@
 			margin-right: 0.8rem;
 		}
 	}
+
+	&__item {
+		position: relative;
+		margin-bottom: 2rem;
+	}
+
+	&__err--msg {
+		pointer-events: none;
+		font-size: 0.7rem;
+		color: @color__red;
+		margin-top: 0.2rem;
+	}
 }
 
 form {
@@ -42,21 +54,30 @@ input {
 	&[type=tel] {
 		display: block;
 		width: 100%;
-		margin-bottom: 2rem;
+		margin-bottom: 0;
 		font-weight: 300;
 		padding: 0.6em 0.8em;
 		color: inherit;
 		border: 2px solid @color__grey;
+
+		&.err {
+			border-color: @color__red;
+		}
 	}
 
 	&[type=file] {
 		display: block;
 		width: 100%;
-		margin-bottom: 2rem;
+		margin-bottom: 0;
 		font-weight: 300;
 		padding: 0.6em 0.8em;
 		color: @color__black;
 		background: @color__grey;
+		border: 2px solid @color__grey;
+
+		&.err {
+			border-color: @color__red;
+		}
 	}
 
 	&[type=checkbox],
@@ -64,12 +85,16 @@ input {
 		display: inline-block;
 		vertical-align: middle;
 		margin-right: 0.2rem;
+
+		&.err {
+			box-shadow: 0 0 5px 0 @color__red;
+		}
 	}
 
 	&[type=range] {
 		display: block;
 		width: 100%;
-		margin-bottom: 2rem;
+		margin-bottom: 0;
 	}
 
 	&[type=submit],
@@ -99,9 +124,36 @@ textarea {
 	display: block;
 	width: 100%;
 	min-height: 100px;
-	margin-bottom: 2rem;
+	margin-bottom: 0;
 	font-weight: 300;
 	padding: 0.6em 0.8em;
 	color: inherit;
 	border: 2px solid @color__grey;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.err {
+		border-color: @color__red;
+	}
+}
+
+select {
+	display: block;
+	width: 100%;
+	margin-bottom: 0;
+	font-weight: 300;
+	padding: 0.6em 0.8em;
+	color: inherit;
+	border: 2px solid @color__grey;
+	background: @color__white;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.err {
+		border-color: @color__red;
+	}
 }

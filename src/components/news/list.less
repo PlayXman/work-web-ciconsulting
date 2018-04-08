@@ -9,6 +9,15 @@
 			padding-bottom: 5rem;
 		}
 
+		&:hover,
+		&:active {
+			text-decoration: none;
+
+			.news__item-content {
+				color: darken(@color__grey, 20%);
+			}
+		}
+
 		&-img {
 			width: 7rem;
 			height: 7rem;
@@ -25,7 +34,7 @@
 
 		&-content {
 			flex-grow: 1;
-			flex-basis: 0;
+			flex-basis: 1px;
 		}
 
 		&-text {
@@ -43,5 +52,34 @@
 			align-self: flex-end;
 		}
 
+	}
+
+	&__pager {
+		text-align: center;
+
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			background: @color__blue;
+			color: @color__white;
+			padding: 0.6rem 0.8rem;
+			line-height: 1;
+			border: 1px solid @color__blue;
+			margin: 0 0.2rem 0.2rem;
+
+			&:hover,
+			&:active {
+				color: @color__white;
+				text-decoration: none;
+				opacity: 0.8;
+			}
+
+			&--active {
+				color: @color__blue;
+				background: @color__white;
+				pointer-events: none;
+				cursor: default;
+			}
+		}
 	}
 }

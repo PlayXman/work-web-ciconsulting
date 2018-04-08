@@ -13,10 +13,5 @@
 
 
 # Dodelat
-- Aktuality
-	- Vypis
 - Vyladit v dalsich prohlizecich
-	- ie11
-	- edge
-	- firefox
-	- mobil
+	- mobil	
