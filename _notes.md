@@ -13,5 +13,4 @@
 
 
 # Dodelat
-- Vyladit v dalsich prohlizecich
-	- mobil	
+- nic
