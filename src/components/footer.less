@@ -1,0 +1,39 @@
+footer {
+	background: #23428e;
+	background: -moz-radial-gradient(28% 30%, ellipse cover, #23428e 0%, #29337a 100%);
+	background: -webkit-radial-gradient(28% 30%, ellipse cover, #23428e 0%, #29337a 100%);
+	background: radial-gradient(ellipse at 28% 30%, #23428e 0%, #29337a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23428e', endColorstr='#29337a', GradientType=1);
+	padding-top: 2rem;
+	padding-bottom: 10.8rem;
+}
+
+.footer {
+	&__menuCont {
+		margin-bottom: 2rem;
+	}
+
+	&__menu {
+		@media (min-width: @breakpoint__md) {
+			margin-right: 1rem;
+		}
+
+		@media (max-width: (@breakpoint__sm - 1)) {
+			padding: 2rem 0;
+		}
+
+		a {
+			padding-left: 0.8rem;
+			padding-right: 0.8rem;
+
+			@media (max-width: (@breakpoint__sm - 1)) {
+				padding: 0.8rem;
+
+				&:before {
+					margin: auto;
+					bottom: 0;
+				}
+			}
+		}
+	}
+}

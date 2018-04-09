@@ -1,0 +1,50 @@
+.block-grant {
+	&__itemCont {
+		padding-right: 30px;
+	}
+
+	&__item {
+		position: relative;
+		padding-right: 30px;
+
+		a {
+			&:hover,
+			&:active {
+				text-decoration: none;
+
+				.block-grant__icon {
+					color: @color__red;
+
+					&:after {
+						content: '\66';
+						.icon();
+						position: absolute;
+						bottom: 0.8rem;
+						left: 0;
+						right: 0;
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	&__icon {
+		font-size: 3.9rem;
+		padding-bottom: 1rem;
+		position: relative;
+	}
+
+	&__text {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__arrow {
+		position: absolute;
+		width: 30px;
+		right: 0;
+		top: 2.2rem;
+		font-size: 2rem;
+	}
+}

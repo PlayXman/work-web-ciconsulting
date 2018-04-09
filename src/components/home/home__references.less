@@ -1,0 +1,60 @@
+.block-reference {
+	&__text {
+		margin-bottom: 1rem;
+	}
+
+	&__item {
+		@padding: 10px;
+
+		padding: 0;
+		position: relative;
+		display: block;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: @color__grey;
+		color: @color__white;
+		line-height: 1.1;
+		font-size: 14px;
+		overflow: hidden;
+
+		&:hover,
+		&:active {
+			color: @color__white;
+
+			&:after {
+				background: rgba(0,0,0,0.2);
+			}
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 67.5%;
+		}
+
+		&-badge {
+			position: absolute;
+			top: @padding;
+			right: @padding;
+			max-width: calc(~"100% - "@padding * 2);
+			padding: 5px 8px;
+		}
+
+		&-text {
+			position: absolute;
+			left: @padding;
+			bottom: @padding;
+			text-transform: uppercase;
+			text-align: left;
+			font-weight: bold;
+			text-shadow: 0 0 2px #00000040;
+			max-width: calc(~"100% - "@padding * 2 + 20);
+		}
+
+		&-icon {
+			position: absolute;
+			bottom: @padding;
+			right: @padding;
+		}
+	}
+}

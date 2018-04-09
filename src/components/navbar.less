@@ -1,0 +1,129 @@
+.navbar {
+	font-size: 0.6rem;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	position: relative;
+
+	&__logo {
+		width: 10em;
+	}
+
+	&__mainLinks {
+		margin-right: 3em;
+
+		a {
+			padding: 2em 1em;
+		}
+	}
+
+	&__btn--close {
+		padding: 1.4rem;
+		color: @color__grey;
+		font-size: 2rem;
+		line-height: 1;
+		vertical-align: middle;
+
+		&:hover,
+		&:active {
+			text-decoration: none;
+			color: @color__red;
+		}
+	}
+
+	&__menuBar {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 300px;
+		background: @color__white;
+		transform: translateX(100%);
+		transition: transform 300ms ease-in-out;
+		z-index: 100;
+		font-size: 1rem;
+
+		&.open {
+			transform: translateX(0);
+		}
+
+		&-close {
+			text-align: right;
+		}
+
+		&-links {
+			overflow: auto;
+			padding: 3rem 15px;
+			max-height: calc(~"100% - 5.2rem");
+
+			a {
+				display: block;
+				padding: 0.8rem 0;
+			}
+		}
+	}
+
+	@media (min-width: @breakpoint__sm) {
+		font-size: 0.7rem;
+	}
+
+	@media (min-width: @breakpoint__md) {
+		font-size: 0.8rem;
+	}
+
+	@media (min-width: @breakpoint__lg) {
+		font-size: 1rem;
+	}
+}
+
+.navbar__searchBar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: fade(@color__white, 90%);
+	transform: translateY(-100%);
+	transition: transform 300ms ease-in-out;
+	z-index: 90;
+
+	&.open {
+		transform: translateY(0);
+	}
+
+	form {
+		height: 100%;
+
+		.row {
+			height: 100%;
+
+			> div {
+				padding: 0;
+			}
+		}
+	}
+
+	label {
+		position: relative;
+		margin-bottom: 0;
+		width: 100%;
+		font-size: 1rem;
+
+		.icon-search {
+			position: absolute;
+			left: 0;
+			padding: 0.5em 0.5em;
+			font-size: 1.3rem;
+			line-height: 1.5;
+			color: #bfbfbf;
+		}
+	}
+}
+
+input[type=search].navbar__searchBar {
+	&-input {
+		padding-left: 2.4rem;
+		margin-bottom: 0;
+		font-weight: normal;
+		color: @color__black;
+	}
+}
