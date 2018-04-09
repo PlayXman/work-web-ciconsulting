@@ -13,5 +13,4 @@
 
 
 # Dodelat
-- Hamburger menu
-	- muzes tam hodit nakou svetle modrou barvu na pozadi? Napr. #e4e7f9? Abychom to trochu oddelili od pozadi.. a idealne pripravit i druhou uroven menu. Tzn. bude tam pokracovat méně dulezita navigace ve dvou urovnich.
+- nic

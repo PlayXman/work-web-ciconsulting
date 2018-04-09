@@ -37,7 +37,7 @@
 		right: 0;
 		bottom: 0;
 		width: 300px;
-		background: @color__white;
+		background: @color__veryLightBlue;
 		transform: translateX(100%);
 		transition: transform 300ms ease-in-out;
 		z-index: 100;
@@ -56,9 +56,35 @@
 			padding: 3rem 15px;
 			max-height: calc(~"100% - 5.2rem");
 
+			ul {
+				padding: 0 0 2rem 0;
+			}
+
+			li {
+				list-style-type: none;
+			}
+
 			a {
 				display: block;
-				padding: 0.8rem 0;
+				padding: 0.6rem 0;
+				font-weight: bold;
+				text-transform: uppercase;
+				transition: opacity @transition__length--hover;
+
+				&:hover,
+				&:active {
+					text-decoration: none;
+					opacity: 0.8;
+				}
+			}
+		}
+
+		&-subLinks {
+			padding: 0 0 0 1rem;
+
+			a {
+				text-transform: none;
+				font-weight: 300;
 			}
 		}
 	}
