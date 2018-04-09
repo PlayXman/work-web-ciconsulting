@@ -8,34 +8,45 @@
 			text-decoration: none;
 
 			&:before {
-				.icon();
-				content: '\6e';
-				display: block;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				margin: auto;
-				color: @color__white;
-				position: absolute;
-				z-index: 2;
-				font-size: 3rem;
-				line-height: 1.2;
-				height: 3rem;
-				text-align: center;
+				opacity: 1;
 			}
 
 			&:after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
 				background: rgba(0, 0, 0, 0.2);
-				z-index: 1;
 			}
+		}
+
+		&:before {
+			.icon();
+			content: '\6e';
+			display: block;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			color: @color__white;
+			position: absolute;
+			z-index: 2;
+			font-size: 3rem;
+			line-height: 1.2;
+			height: 3rem;
+			text-align: center;
+			opacity: 0;
+			transition: opacity @transition__length--hover;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: none;
+			z-index: 1;
+			transition: background-color @transition__length--hover;
 		}
 
 		img {
