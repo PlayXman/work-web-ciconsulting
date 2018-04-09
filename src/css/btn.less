@@ -25,6 +25,10 @@
 			&:active {
 				color: @color__white;
 			}
+
+			.btn__icon i {
+				background: @color__white;
+			}
 		}
 
 		&--blue {
@@ -34,6 +38,10 @@
 			&:hover,
 			&:active {
 				color: @color__blue;
+			}
+
+			.btn__icon i {
+				background: @color__blue;
 			}
 		}
 
@@ -45,6 +53,10 @@
 			&:active {
 				color: @color__green;
 			}
+
+			.btn__icon i {
+				background: @color__green;
+			}
 		}
 
 		&--grey {
@@ -55,18 +67,62 @@
 			&:active {
 				color: @color__grey;
 			}
+
+			.btn__icon i {
+				background: @color__grey;
+			}
+		}
+	}
+}
+
+.btn-link {
+	position: relative;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 2rem 1rem;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: @color__red;
+		text-decoration: none;
+	}
+
+	&__hoverColor {
+		&--blue {
+			&:hover,
+			&:active {
+				color: @color__blue;
+			}
+		}
+
+		&--white {
+			.btn__icon i {
+				background: @color__white;
+			}
+
+			&:hover,
+			&:active {
+				color: @color__white;
+
+				@media (max-width: (@breakpoint__sm - 1)) {
+					color: @color__lightBlue;
+
+					.btn__icon {
+						display: none
+					}
+				}
+			}
 		}
 	}
 
-	&__icon {
-		&--dots {
-			&:after {
-				content: '\66';
-				.icon();
-				vertical-align: middle;
-				margin-left: 15px;
-			}
-		}
+	.btn__icon {
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+		bottom: 10%;
 	}
 }
 
