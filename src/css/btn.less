@@ -7,6 +7,7 @@
 	border: 3px solid @color__red;
 	text-transform: uppercase;
 	vertical-align: middle;
+	transition: opacity @transition__length--hover;
 
 	&:hover,
 	&:active {
@@ -24,6 +25,10 @@
 			&:active {
 				color: @color__white;
 			}
+
+			.btn__icon i {
+				background: @color__white;
+			}
 		}
 
 		&--blue {
@@ -33,6 +38,10 @@
 			&:hover,
 			&:active {
 				color: @color__blue;
+			}
+
+			.btn__icon i {
+				background: @color__blue;
 			}
 		}
 
@@ -44,6 +53,10 @@
 			&:active {
 				color: @color__green;
 			}
+
+			.btn__icon i {
+				background: @color__green;
+			}
 		}
 
 		&--grey {
@@ -54,16 +67,9 @@
 			&:active {
 				color: @color__grey;
 			}
-		}
-	}
 
-	&__icon {
-		&--dots {
-			&:after {
-				content: '\66';
-				.icon();
-				vertical-align: middle;
-				margin-left: 15px;
+			.btn__icon i {
+				background: @color__grey;
 			}
 		}
 	}
@@ -80,18 +86,6 @@
 	&:active {
 		color: @color__red;
 		text-decoration: none;
-
-		&:after {
-			content: '\66';
-			.icon();
-			color: @color__red;
-			position: absolute;
-			display: block;
-			margin: 0 auto;
-			left: 0;
-			right: 0;
-			text-align: center;
-		}
 	}
 
 	&__hoverColor {
@@ -103,29 +97,39 @@
 		}
 
 		&--white {
+			.btn__icon i {
+				background: @color__white;
+			}
+
 			&:hover,
 			&:active {
 				color: @color__white;
 
-				&:after {
-					color: @color__white;
-				}
-
 				@media (max-width: (@breakpoint__sm - 1)) {
 					color: @color__lightBlue;
 
-					&:after {
-						display: none;
+					.btn__icon {
+						display: none
 					}
 				}
 			}
 		}
+	}
+
+	.btn__icon {
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+		bottom: 10%;
 	}
 }
 
 .btn-icon {
 	font-size: 2rem;
 	padding: 0 0.2rem;
+	transition: color @transition__length--hover;
 
 	&:hover,
 	&:active {
@@ -159,6 +163,8 @@
 }
 
 .btn-image {
+	transition: opacity @transition__length--hover;
+
 	&:hover,
 	&:active {
 		text-decoration: none;

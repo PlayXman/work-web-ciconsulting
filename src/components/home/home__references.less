@@ -30,6 +30,7 @@
 			content: '';
 			display: block;
 			padding-top: 67.5%;
+			transition: background-color @transition__length--hover;
 		}
 
 		&-badge {
@@ -55,6 +56,10 @@
 			position: absolute;
 			bottom: @padding;
 			right: @padding;
+
+			.btn__icon i {
+				background: @color__white;
+			}
 		}
 	}
 }
