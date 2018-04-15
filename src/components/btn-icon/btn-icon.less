@@ -20,16 +20,16 @@
 	overflow: hidden;
 	text-align: center;
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
+	justify-content: center;
 	vertical-align: middle;
 
 	i {
-		display: inline-block;
-		vertical-align: middle;
+		display: block;
 		background: @color__red;
 		width: 4px;
 		height: 4px;
-		margin: 0;
+		margin: 0 2px;
 	}
 
 	&-anim {
@@ -73,8 +73,7 @@
 
 		&--toRight {
 			.btn__icon {
-				padding: 0 0.4em;
-				margin-left: 0.4em;
+				padding: 0;
 
 				i {
 					animation-duration: 1000ms;
